@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>青云文创</title>
+    <style type="text/css">
+        body { 
+            text-align: center; 
+            margin: 0 50px; 
+            background-image: url('mg/f14c1f734562d4316a41bacc372d1865.gif'); /* 设置背景GIF图 */
+            background-size: cover; /* 使背景图覆盖整个页面 */
+            background-repeat: no-repeat; /* 防止背景图重复 */
+            background-attachment: fixed; /* 使背景图固定 */
+        }
+        p { 
+            font-size: 20px; 
+            text-indent: 2em; 
+            text-align: left; 
+        }
+        h3 { 
+            font-size: 28px; 
+            text-shadow: 0px 0px 5px yellow; 
+            color: red; 
+        }
+		
+		h4 {
+		    font-size: 28px; 
+		    text-shadow: 0px 0px 5px yellow; 
+		    color: blueviolet; 
+		}
+		
+		h5 {
+		    font-size: 28px; 
+		    text-shadow: 0px 0px 5px yellow; 
+		    color: lawngreen; 
+		}
+		
+        h6 {
+		    font-size: 28px; 
+		    text-shadow: 0px 0px 5px yellow; 
+		    color: rgb(193, 0, 252); 
+		}
+
+        /* 弹窗样式 */
+        .modal {
+            display: none; /* 默认隐藏 */
+            position: fixed; /* 固定位置 */
+            z-index: 1; /* 确保在最上层 */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4); /* 半透明背景 */
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 垂直居中 */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 300px; /* 弹窗宽度 */
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 图片样式 */
+        .image-container {
+            display: flex; /* 使用flex布局 */
+            flex-direction: column; /* 垂直排列 */
+            align-items: center; /* 水平居中 */
+            text-align: center; /* 文本居中 */
+            margin-right: 20px; /* 图片之间的间距 */
+        }
+
+        .image-container img {
+            display: block;
+            margin: 0 auto; /* 确保图片水平居中 */
+        }
+
+        .image-container p {
+            margin-top: 10px; /* 调整文字与图片的间距 */
+            font-size: 18px;
+            color: #333;
+        }
+
+        /* 文章创建时间颜色 */
+        .creation-time {
+            color: orange; /* 设置颜色为橙色 */
+        }
+
+        /* 新增的段落样式 */
+        .custom-text {
+            font-family: Arial, sans-serif; /* 设置字体 */
+            font-size: 10px; /* 设置字体大小 */
+            color: orange; /* 设置颜色 */
+        }
+
+        /* 水平滚动容器样式 */
+        .scroll-container {
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 10px;
+            justify-content: center; /* 添加这一行 */
+        }
+    </style>
+</head>
+<body>
+    <audio id="backgroundMusic" loop>
+        <source src="mg/background-music .mp3" type="audio/mpeg">
+        您的浏览器不支持 audio 元素。
+    </audio>
+
+    <button onclick="playMusic()">播放音乐</button>
+
+    <h3>物语类轻小说</h3>
+    <div class="scroll-container">
+        <div class="image-container">
+            <a href="http://127.0.0.1:8848/%E5%BD%AD%E9%9D%92%E4%BA%91/one.html" target="_blank">
+                <p style="font-family: Arial, sans-serif; font-size: 18px; color: orange; text-align: center;">音之物语</p>
+            </a>
+            <img src="mg/027799fb-1b8a-52bc-967f-43e8c5a95bbb_0.png" width="300" alt="画稿示例">
+        </div>
+    </div>
+
+    <h4>科幻末世类小说</h4>
+    <div class="scroll-container">
+        <div class="image-container">
+            <a href="http://127.0.0.1:8848/%E5%BD%AD%E9%9D%92%E4%BA%91/one.html" target="_blank">
+                <p style="font-family: Arial, sans-serif; font-size: 18px; color: orange; text-align: center;">地核天灾</p>
+            </a>
+            <img src="mg/call_b644478f-d244-11ef-a42b-fa1b19b7f964_0.png" width="300" alt="画稿示例">
+        </div>
+    </div>
+	
+	<h5>世界名著</h5>
+	<div class="scroll-container">
+	    <div class="image-container">
+	        <a href="http://127.0.0.1:8848/%E5%BD%AD%E9%9D%92%E4%BA%91/one.html" target="_blank">
+	            <p style="font-family: Arial, sans-serif; font-size: 18px; color: orange; text-align: center;">简爱</p>
+	        </a>
+	        <img src="mg/OIP-C.jpg" width="200" height="250" alt="画稿示例">
+	    </div>
+	    <div class="image-container">
+	        <a href="http://127.0.0.1:8848/%E5%BD%AD%E9%9D%92%E4%BA%91/one.html" target="_blank">
+	            <p style="font-family: Arial, sans-serif; font-size: 18px; color: orange; text-align: center;">巴黎圣母院</p>
+	        </a>
+	        <img src="mg/OIP-C (1).jpg" width="200" height="250" alt="画稿示例">
+	    </div>
+	    <div class="image-container">
+	        <a href="http://127.0.0.1:8848/%E5%BD%AD%E9%9D%92%E4%BA%91/one.html" target="_blank">
+	            <p style="font-family: Arial, sans-serif; font-size: 18px; color: orange; text-align: center;">钢铁是怎样练成的</p>
+	        </a>
+	        <img src="mg/OIP-C (2).jpg" width="200" height="250" alt="画稿示例">
+	    </div>
+	    <div class="image-container">
+	        <a href="http://127.0.0.1:8848/%E5%BD%AD%E9%9D%92%E4%BA%91/one.html" target="_blank">
+	            <p style="font-family: Arial, sans-serif; font-size: 18px; color: orange; text-align: center;">鲁冰逊漂流记</p>
+	        </a>
+	        <img src="mg/OIP-C (3).jpg" width="200" height="250" alt="画稿示例">
+	    </div>
+
+
+    </div>
+
+<body style="display: flex; flex-direction: column; align-items: center;">
+    <!-- 其他内容 -->
+    <h6>中华经典</h6>
+    <div class="scroll-container">
+        <div class="image-container">
+            <a href="http://127.0.0.1:8848/%E5%BD%AD%E9%9D%92%E4%BA%91/one.html" target="_blank">
+                <p style="font-family: Arial, sans-serif; font-size: 18px; color: orange; text-align: center;">周易</p>
+            </a>
+            <img src="mg/213521_205552643104_4.jpg" width="300" alt="画稿示例">
+        </div>
+
+        <div class="image-container">
+            <a href="http://127.0.0.1:8848/%E5%BD%AD%E9%9D%92%E4%BA%91/one.html" target="_blank">
+                <p style="font-family: Arial, sans-serif; font-size: 18px; color: orange; text-align: center;">大学</p>
+            </a>
+            <img src="mg/213521_001216631101_4.jpg" width="300" alt="画稿示例">
+        </div>
+
+        <div class="image-container">
+            <a href="http://127.0.0.1:8848/%E5%BD%AD%E9%9D%92%E4%BA%91/one.html" target="_blank">
+                <p style="font-family: Arial, sans-serif; font-size: 18px; color: orange; text-align: center;">春秋</p>
+            </a>
+            <img src="mg/213521_205644178106_4.jpg" width="300" alt="画稿示例">
+        </div>
+
+        <div class="image-container">
+            <a href="http://127.0.0.1:8848/%E5%BD%AD%E9%9D%92%E4%BA%91/one.html" target="_blank">
+                <p style="font-family: Arial, sans-serif; font-size: 18px; color: orange; text-align: center;">孝经</p>
+            </a>
+            <img src="mg/213521_205840309102_4.jpg" width="300" alt="画稿示例">
+        </div>
+
+        <div class="image-container">
+            <a href="http://127.0.0.1:8848/%E5%BD%AD%E9%9D%92%E4%BA%91/one.html" target="_blank">
+                <p style="font-family: Arial, sans-serif; font-size: 18px; color: orange; text-align: center;">周礼</p>
+            </a>
+            <img src="mg/213521_210029260107_4.jpg" width="300" alt="画稿示例">
+        </div>
+
+        <div class="image-container">
+            <a href="http://127.0.0.1:8848/%E5%BD%AD%E9%9D%92%E4%BA%91/one.html" target="_blank">
+                <p style="font-family: Arial, sans-serif; font-size: 18px; color: orange; text-align: center;">仪礼</p>
+            </a>
+            <img src="mg/213521_210126243103_4.jpg" width="300" alt="画稿示例">
+        </div>
+    </div>
+    <!-- 其他内容 -->
+</body>
+
+
+	</div>
+
+    <p id="worldTime" class="custom-text"></p>
+    <a href="https://chatglm.cn/main/guest?lang=zh" style="font-family: Arial, sans-serif; font-size: 16px; color: orange;">ai问答</a>
+	
+    <br>
+	<br>
+	<br>
+
+    <!-- 注册按钮 -->
+    <button id="registerBtn">青云文创账号注册</button>
+
+    <!-- 弹窗结构 -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>用户注册</h2>
+            <form>
+                <label for="username">用户名:</label><br>
+                <input type="text" id="username" name="username"><br>
+                <label for="email">邮箱:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="password">密码:</label><br>
+                <input type="password" id="password" name="password"><br><br>
+                <input type="submit" value="注册">
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function playMusic() {
+            var audio = document.getElementById('backgroundMusic');
+            audio.play().catch(error => {
+                console.error('播放音乐时出错:', error);
+            });
+        }
+
+        function updateWorldTime() {
+            const now = new Date();
+            const worldTimeElement = document.getElementById('worldTime');
+            worldTimeElement.textContent = now.toUTCString(); // 使用UTC时间
+            setTimeout(updateWorldTime, 1000); // 每秒更新一次
+        }
+
+        // 尝试自动播放音乐（可能被浏览器阻止）
+        document.addEventListener('DOMContentLoaded', () => {
+            var audio = document.getElementById('backgroundMusic');
+            audio.play().catch(error => {
+                console.error('自动播放音乐时出错:', error);
+            });
+
+            updateWorldTime(); // 添加这一行
+        });
+
+        // 获取弹窗元素
+        var modal = document.getElementById("myModal");
+
+        // 获取打开弹窗的按钮
+        var btn = document.getElementById("registerBtn");
+
+        // 获取关闭弹窗的<span>元素
+        var span = document.getElementsByClassName("close")[0];
+
+        // 当用户点击按钮时，打开弹窗
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // 当用户点击<span>（x）时，关闭弹窗
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // 当用户点击弹窗外部时，关闭弹窗
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
